@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciBoost - 加速科研，点亮未来</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">SciBoost</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#how-to-participate">参与方式</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">SciBoost</span>
+                </h1>
+                <p class="hero-subtitle">加速科研，点亮未来</p>
+                <p class="hero-description">
+                    连接创新科技与资金支持，推动科研突破，共创美好未来
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToSection('projects')">
+                        立即参与
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('about')">
+                        了解更多
+                    </button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示模块 -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门科研项目</h2>
+                <p class="section-subtitle">支持前沿科技，见证创新力量</p>
+            </div>
+            <div class="projects-grid">
+                <!-- 项目卡片 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=400&fit=crop" alt="量子计算研究">
+                        <div class="project-category">量子科技</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">下一代量子计算芯片研发</h3>
+                        <p class="project-description">
+                            开发具有1000+量子比特的下一代量子处理器，突破现有计算极限，为药物发现、材料科学和密码学带来革命性进展。
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">¥2,500,000</span>
+                                <span class="stat-label">目标金额</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">¥1,680,000</span>
+                                <span class="stat-label">已筹金额</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">67%</span>
+                                <span class="stat-label">完成度</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="67"></div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="days-left">剩余 15 天</span>
+                            <button class="btn btn-primary btn-small">支持项目</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=400&fit=crop" alt="AI医疗诊断">
+                        <div class="project-category">人工智能</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI辅助癌症早期诊断系统</h3>
+                        <p class="project-description">
+                            基于深度学习的医疗影像分析系统，能够在早期阶段检测多种癌症，提高诊断准确率至95%以上，挽救更多生命。
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">¥1,800,000</span>
+                                <span class="stat-label">目标金额</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">¥2,100,000</span>
+                                <span class="stat-value overfunded">已超募</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">117%</span>
+                                <span class="stat-label">完成度</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill overfunded" data-progress="100"></div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-status">众筹成功</span>
+                            <button class="btn btn-secondary btn-small">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=400&fit=crop" alt="新能源电池">
+                        <div class="project-category">新能源</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">固态电池技术研发</h3>
+                        <p class="project-description">
+                            开发新一代固态锂电池技术，能量密度提升50%，充电速度提高3倍，彻底解决电动车续航焦虑问题。
+                        </p>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">¥3,200,000</span>
+                                <span class="stat-label">目标金额</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">¥890,000</span>
+                                <span class="stat-label">已筹金额</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">28%</span>
+                                <span class="stat-label">完成度</span>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="28"></div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="days-left">剩余 28 天</span>
+                            <button class="btn btn-primary btn-small">支持项目</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 投资者/参与者模块 -->
+    <section id="how-to-participate" class="participate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">如何参与</h2>
+                <p class="section-subtitle">简单四步，开启科研投资之旅</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">注册账户</h3>
+                    <p class="step-description">创建您的SciBoost账户，完成实名认证，开启科研投资之旅</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">浏览项目</h3>
+                    <p class="step-description">探索各类前沿科研项目，了解项目详情、团队背景和技术创新</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">投资支持</h3>
+                    <p class="step-description">选择您感兴趣的项目，投入资金支持科研创新，共享科技红利</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">查看进度</h3>
+                    <p class="step-description">实时跟踪项目进展，接收研发成果报告，见证科技改变世界的力量</p>
+                </div>
+            </div>
+            <div class="participate-cta">
+                <button class="btn btn-primary btn-large">立即注册</button>
+                <button class="btn btn-secondary btn-large">了解更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科技研发介绍模块 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">我们的使命</h2>
+                <p class="section-subtitle">加速科研创新，推动人类进步</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        SciBoost致力于连接科研创新者与资金支持者，打破传统科研资金壁垒，
+                        让前沿科技项目获得所需资源，加速从实验室到现实世界的转化进程。
+                    </p>
+                    <p class="about-description">
+                        我们相信，每一伟大的科学突破背后，都需要资本的支持与信任。
+                        通过透明的资金募集机制和专业的项目评估体系，我们确保每一笔投资
+                        都能产生最大的科研价值和社会影响力。
+                    </p>
+                </div>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
+                                <path d="M2 17L12 22L22 17"></path>
+                                <path d="M2 12L12 17L22 12"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>专业评估</h4>
+                            <p>由资深科学家和行业专家组成评审团队，确保项目质量和技术可行性</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12L11 14L15 10"></path>
+                                <path d="M21 12C21 16.971 16.971 21 12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12Z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>透明管理</h4>
+                            <p>全程透明的资金管理流程，定期公开项目进展和资金使用情况</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14L9 14L11 22L21 10L15 10L13 2Z"></path>
+                            </svg>
+                        </div>
+                        <div class="feature-content">
+                            <h4>高效转化</h4>
+                            <p>加速科研成果从实验室到市场的转化，最大化科研投资的商业价值</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们模块 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系我们</h2>
+                <p class="section-subtitle">有任何问题或建议，欢迎与我们联系</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>邮箱</h4>
+                            <p>contact@sciboost.tech</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92V3a1 1 0 0 0-1-1h-5.5a1 1 0 0 0-.96.73l-1.5 5a1 1 0 0 0 .96 1.27H19"></path>
+                                <path d="M16.5 10.5L22 16.92"></path>
+                                <path d="M16.5 10.5L12.5 21a1 1 0 0 1-1.86 0L7.5 13.5l-3.5-2 0 0a1 1 0 0 1-.3-1.62l6-6a1 1 0 0 1 1.62.3l2 3.5 7.5-7.5a1 1 0 0 1 1.5 1.5l-7.5 7.5 2 3.5 0 0a1 1 0 0 1-.3 1.62l-6 6a1 1 0 0 1-1.62-.3l-2-3.5z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>地址</h4>
+                            <p>北京市海淀区中关村科技园区</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92V3a1 1 0 0 0-1-1h-5.5a1 1 0 0 0-.96.73l-1.5 5a1 1 0 0 0 .96 1.27H19"></path>
+                                <path d="M16.5 10.5L22 16.92"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>电话</h4>
+                            <p>+86 10 8888 8888</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">SciBoost</h4>
+                    <p class="footer-description">
+                        加速科研创新，连接科技与资本，推动人类进步。
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#projects">科研项目</a></li>
+                        <li><a href="#how-to-participate">参与方式</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">投资者指南</a></li>
+                        <li><a href="#">科研团队指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">法律</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">风险提示</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SciBoost. All rights reserved. | 京ICP备2026888888号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
