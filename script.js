@@ -76,14 +76,16 @@
     // ==================== 滚动效果 ====================
 
     function initScrollEffects() {
-        // 导航链接点击平滑滚动
+        // 导航链接点击处理
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId.startsWith('#')) {
+                    // 内部锚点链接：平滑滚动
+                    e.preventDefault();
                     scrollToSection(targetId.substring(1));
                 }
+                // 外部页面链接：允许默认跳转行为
             });
         });
 
