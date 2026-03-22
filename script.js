@@ -355,6 +355,14 @@
         if (e.key === 'Tab') {
             document.body.classList.add('keyboard-navigation');
         }
+        // ESC键关闭弹窗
+        if (e.key === 'Escape') {
+            const bankModal = document.getElementById('bankModal');
+            if (bankModal && bankModal.classList.contains('active')) {
+                bankModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
     });
 
     document.addEventListener('mousedown', function() {

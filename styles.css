@@ -558,6 +558,11 @@ body {
     align-items: center;
 }
 
+.project-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .days-left {
     font-size: 0.875rem;
     color: var(--gray-500);
@@ -786,80 +791,1206 @@ body {
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* 页脚 */
-.footer {
-    background: var(--gray-900);
-    color: var(--gray-300);
-    padding: 4rem 0 2rem;
+/* ==================== 支付页面样式 ==================== */
+
+/* 支付页面头部 */
+.donation-hero {
+    padding: 8rem 0 4rem;
+    background: var(--gradient-blue);
+    color: var(--white);
+    text-align: center;
+    margin-top: 4rem;
 }
 
-.footer-content {
+.donation-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.donation-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-blue-100) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.donation-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 支付页面主体 */
+.donation-main {
+    padding: 4rem 0;
+    background: var(--gray-50);
+}
+
+.donation-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.donation-info h2,
+.bank-accounts h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 1.5rem;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 支付说明 */
+.donation-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
-.footer-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1rem;
-}
-
-.footer-description {
-    color: var(--gray-400);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.footer-subtitle {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 1rem;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.75rem;
-}
-
-.footer-links a {
-    color: var(--gray-400);
-    text-decoration: none;
-    transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-    color: var(--white);
-}
-
-.footer-social {
+.benefit-item {
     display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-normal);
+}
+
+.benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.benefit-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-content p {
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* 统计数据 */
+.donation-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
-.footer-social .social-link {
-    color: var(--gray-400);
+.stat-card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-normal);
 }
 
-.footer-social .social-link:hover {
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--primary-blue);
+    margin-bottom: 0.5rem;
 }
 
-.footer-bottom {
-    border-top: 1px solid var(--gray-700);
-    padding-top: 2rem;
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 银行账户选择 */
+.bank-accounts {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.bank-accounts-subtitle {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.country-flags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.country-flag {
+    background: var(--gray-50);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+}
+
+.country-flag:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.country-flag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-blue);
+    transform: translateY(-100%);
+    transition: transform var(--transition-fast);
+}
+
+.country-flag:hover::before {
+    transform: translateY(0);
+}
+
+.flag-icon {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 国旗样式 */
+.flag-uk {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(0deg, #012169 25%, transparent 25%, transparent 75%, #012169 75%),
+                linear-gradient(90deg, #012169 40%, transparent 40%, transparent 60%, #012169 60%),
+                linear-gradient(0deg, transparent 40%, #C8102E 40%, #C8102E 60%, transparent 60%),
+                linear-gradient(90deg, transparent 45%, #C8102E 45%, #C8102E 55%, transparent 55%),
+                linear-gradient(0deg, transparent 36%, #C8102E 36%, #C8102E 44%, transparent 44%),
+                linear-gradient(90deg, transparent 36%, #C8102E 36%, #C8102E 44%, transparent 44%);
+    background-color: #FFFFFF;
+    border-radius: 2px;
+}
+
+.flag-au {
+    width: 48px;
+    height: 32px;
+    background: radial-gradient(circle at 15px 15px, white 5px, transparent 5px),
+                radial-gradient(circle at 23px 19px, white 5px, transparent 5px),
+                radial-gradient(circle at 31px 15px, white 5px, transparent 5px),
+                radial-gradient(circle at 23px 11px, white 5px, transparent 5px),
+                radial-gradient(circle at 15px 23px, white 5px, transparent 5px),
+                radial-gradient(circle at 23px 27px, white 5px, transparent 5px),
+                radial-gradient(circle at 31px 23px, white 5px, transparent 5px);
+    background-color: #012169;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-au::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #E4002B;
+}
+
+.flag-ca {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(90deg, #FF0000 0%, #FF0000 25%, white 25%, white 75%, #FF0000 75%);
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-ca::before {
+    content: '🍁';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.flag-cn {
+    width: 48px;
+    height: 32px;
+    background: #DE2910;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-cn::before {
+    content: '⭐';
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    font-size: 12px;
+    color: #FFDE00;
+}
+
+.flag-cn::after {
+    content: '⭐⭐⭐⭐';
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 8px;
+    color: #FFDE00;
+    letter-spacing: 2px;
+}
+
+.flag-eu {
+    width: 48px;
+    height: 32px;
+    background: #003399;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-eu::before {
+    content: '⭐⭐';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-size: 10px;
+    color: #FFCC00;
+    letter-spacing: 8px;
+}
+
+.flag-eu::after {
+    content: '⭐⭐';
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 10px;
+    color: #FFCC00;
+    letter-spacing: 8px;
+}
+
+.flag-hu {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(0deg, #477050 0%, #477050 33%, white 33%, white 66%, #D40026 66%);
+    border-radius: 2px;
+}
+
+.flag-nz {
+    width: 48px;
+    height: 32px;
+    background: #012169;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-nz::before {
+    content: '★';
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    font-size: 12px;
+    color: #C8102E;
+}
+
+.flag-nz::after {
+    content: '★★★★';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 8px;
+    color: #C8102E;
+    letter-spacing: 2px;
+}
+
+.flag-sg {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(0deg, #ED2939 0%, #ED2939 50%, white 50%);
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-sg::before {
+    content: '◉';
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: white;
+}
+
+.flag-sg::after {
+    content: '▲';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    font-size: 8px;
+    color: white;
+}
+
+.flag-tr {
+    width: 48px;
+    height: 32px;
+    background: #E30A17;
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-tr::before {
+    content: '☪';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+}
+
+.flag-us {
+    width: 48px;
+    height: 32px;
+    background: linear-gradient(0deg, #B22234 0%, #B22234 7.7%, white 7.7%, white 15.4%, #B22234 15.4%, #B22234 23.1%, white 23.1%, white 30.8%, #B22234 30.8%, #B22234 38.5%, white 38.5%, white 46.2%, #B22234 46.2%, #B22234 53.8%, white 53.8%);
+    border-radius: 2px;
+    position: relative;
+}
+
+.flag-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 53.8%;
+    background: #3C3B6E;
+}
+
+.flag-us::after {
+    content: '⭐';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 6px;
+    color: white;
+}
+
+.flag-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    line-height: 1.3;
+}
+
+/* 提示信息 */
+.donation-note {
+    background: var(--primary-blue-50);
+    border: 1px solid var(--primary-blue-100);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.donation-note p {
+    font-weight: 600;
+    color: var(--primary-blue-dark);
+    margin-bottom: 0.75rem;
+}
+
+.donation-note ul {
+    list-style-position: inside;
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.donation-note li {
+    margin-bottom: 0.25rem;
+}
+
+/* ==================== 银行账户弹窗 ==================== */
+
+.bank-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+}
+
+.bank-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bank-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.bank-modal-content {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    width: 90%;
+    max-width: 600px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    transform: translateY(20px) scale(0.95);
+    transition: all var(--transition-normal);
+    z-index: 2001;
+}
+
+.bank-modal.active .bank-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.bank-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.bank-modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-900);
+}
+
+.bank-modal-close {
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.bank-modal-close:hover {
+    background: var(--gray-200);
+    color: var(--gray-900);
+}
+
+.bank-modal-body {
+    padding: 2rem;
+}
+
+.account-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.account-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.account-label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.account-label {
+    font-weight: 600;
+    color: var(--gray-900);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.copy-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.copy-btn:hover {
+    background: var(--primary-blue-dark);
+    transform: translateY(-1px);
+}
+
+.account-value {
+    background: var(--gray-100);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    color: var(--gray-900);
+    border: 1px solid var(--gray-200);
+    word-break: break-all;
+}
+
+.account-note {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    font-style: italic;
+}
+
+.bank-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+}
+
+/* ==================== 响应式设计 ==================== */
+
+@media (max-width: 1024px) {
+    .donation-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .donation-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .country-flags {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .donation-title {
+        font-size: 2.5rem;
+    }
+    
+    .donation-hero {
+        padding: 6rem 0 3rem;
+    }
+    
+    .donation-main {
+        padding: 3rem 0;
+    }
+    
+    .bank-accounts {
+        padding: 1.5rem;
+    }
+    
+    .country-flags {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .bank-modal-content {
+        width: 95%;
+        max-height: calc(100vh - 80px);
+    }
+    
+    .bank-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .bank-modal-footer {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donation-title {
+        font-size: 2rem;
+    }
+    
+    .benefit-item {
+        padding: 1rem;
+    }
+    
+    .country-flag {
+        padding: 0.75rem;
+    }
+    
+    .flag-name {
+        font-size: 0.625rem;
+    }
+    
+    .bank-modal-footer {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .bank-modal-footer .btn {
+        width: 100%;
+    }
+}
+
+/* ==================== 捐款者名录页面样式 ==================== */
+
+/* 捐款者荣誉墙头部 */
+.donors-hero {
+    padding: 8rem 0 4rem;
+    background: var(--gradient-blue);
+    color: var(--white);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.donors-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.donors-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--white) 0%, var(--primary-blue-100) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.donors-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.donors-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.donor-stat {
     text-align: center;
 }
 
-.footer-bottom p {
-    color: var(--gray-500);
+.donor-stat .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.donor-stat .stat-label {
+    display: block;
     font-size: 0.875rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 捐款者主体区域 */
+.donors-main {
+    padding: 4rem 0;
+    background: var(--gray-50);
+}
+
+.donor-tiers {
+    margin-bottom: 4rem;
+}
+
+.donor-tiers h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 2rem;
+    text-align: center;
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tier-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.tier-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.tier-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.tier-card.diamond::before {
+    background: linear-gradient(90deg, #b9f2ff, #e5e4e2);
+}
+
+.tier-card.platinum::before {
+    background: linear-gradient(90deg, #e5e4e2, #c0c0c0);
+}
+
+.tier-card.gold::before {
+    background: linear-gradient(90deg, #ffd700, #ffed4e);
+}
+
+.tier-card.silver::before {
+    background: linear-gradient(90deg, #c0c0c0, #e5e4e2);
+}
+
+.tier-card.bronze::before {
+    background: linear-gradient(90deg, #cd7f32, #daa520);
+}
+
+.tier-card.supporter::before {
+    background: var(--gradient-blue);
+}
+
+.tier-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tier-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tier-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.tier-amount {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.tier-count {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 筛选和排序 */
+.donors-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.filter-btn.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.sort-group select {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sort-group select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 捐款者荣誉墙 */
+.donors-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.donor-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-normal);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.donor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.donor-avatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.avatar-placeholder {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.tier-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-size: 1rem;
+}
+
+.donor-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+}
+
+.donor-amount {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 0.25rem;
+}
+
+.donor-date {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 0.75rem;
+}
+
+.donor-message {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--gray-200);
+    font-style: italic;
+}
+
+/* 加载更多 */
+.load-more-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* CTA 区域 */
+.donors-cta {
+    padding: 4rem 0;
+    background: var(--gradient-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==================== 响应式设计 ==================== */
+
+@media (max-width: 1024px) {
+    .donors-stats {
+        gap: 2rem;
+    }
+    
+    .tier-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .donors-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        justify-content: center;
+    }
+    
+    .donors-wall {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .donors-title {
+        font-size: 2.5rem;
+    }
+    
+    .donors-hero {
+        padding: 6rem 0 3rem;
+    }
+    
+    .donors-main {
+        padding: 3rem 0;
+    }
+    
+    .donors-stats {
+        gap: 1.5rem;
+    }
+    
+    .donor-stat .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .tier-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .filter-group {
+        justify-content: flex-start;
+    }
+    
+    .donors-wall {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donors-title {
+        font-size: 2rem;
+    }
+    
+    .tier-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .donor-card {
+        padding: 1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ==================== 原有响应式样式 ==================== */
+
+@media (max-width: 1024px) {
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .project-stats {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 /* 动画 */

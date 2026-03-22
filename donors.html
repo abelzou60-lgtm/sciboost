@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捐款者名录 - SciBoost</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">SciBoost</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index.html#projects">项目</a></li>
+                <li><a href="index.html#how-to-participate">参与方式</a></li>
+                <li><a href="donors.html" class="active">捐款者名录</a></li>
+                <li><a href="index.html#about">关于我们</a></li>
+                <li><a href="index.html#contact">联系我们</a></li>
+                <li><a href="donation.html">捐助支持</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 捐款者荣誉墙头部 -->
+    <section class="donors-hero">
+        <div class="container">
+            <div class="donors-hero-content">
+                <h1 class="donors-title">捐款者名录</h1>
+                <p class="donors-subtitle">感谢每一位支持科研创新的善心人士</p>
+                <div class="donors-stats">
+                    <div class="donor-stat">
+                        <span class="stat-number">1,247</span>
+                        <span class="stat-label">捐款人次</span>
+                    </div>
+                    <div class="donor-stat">
+                        <span class="stat-number">¥8,562,300</span>
+                        <span class="stat-label">累计捐款</span>
+                    </div>
+                    <div class="donor-stat">
+                        <span class="stat-number">156</span>
+                        <span class="stat-label">支持项目</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 捐款者展示区域 -->
+    <section class="donors-main">
+        <div class="container">
+            <!-- 捐款等级说明 -->
+            <div class="donor-tiers">
+                <h2>捐款等级</h2>
+                <div class="tier-cards">
+                    <div class="tier-card diamond">
+                        <div class="tier-icon">💎</div>
+                        <h3>钻石级</h3>
+                        <div class="tier-amount">¥100,000+</div>
+                        <div class="tier-count">12 位捐款者</div>
+                    </div>
+                    <div class="tier-card platinum">
+                        <div class="tier-icon">👑</div>
+                        <h3>白金级</h3>
+                        <div class="tier-amount">¥50,000 - ¥99,999</div>
+                        <div class="tier-count">28 位捐款者</div>
+                    </div>
+                    <div class="tier-card gold">
+                        <div class="tier-icon">🥇</div>
+                        <h3>黄金级</h3>
+                        <div class="tier-amount">¥20,000 - ¥49,999</div>
+                        <div class="tier-count">45 位捐款者</div>
+                    </div>
+                    <div class="tier-card silver">
+                        <div class="tier-icon">🥈</div>
+                        <h3>白银级</h3>
+                        <div class="tier-amount">¥10,000 - ¥19,999</div>
+                        <div class="tier-count">89 位捐款者</div>
+                    </div>
+                    <div class="tier-card bronze">
+                        <div class="tier-icon">🥉</div>
+                        <h3>青铜级</h3>
+                        <div class="tier-amount">¥1,000 - ¥9,999</div>
+                        <div class="tier-count">312 位捐款者</div>
+                    </div>
+                    <div class="tier-card supporter">
+                        <div class="tier-icon">❤️</div>
+                        <h3>支持者</h3>
+                        <div class="tier-amount">¥1 - ¥999</div>
+                        <div class="tier-count">761 位捐款者</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 捐款者筛选和排序 -->
+            <div class="donors-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="diamond">钻石级</button>
+                    <button class="filter-btn" data-filter="platinum">白金级</button>
+                    <button class="filter-btn" data-filter="gold">黄金级</button>
+                    <button class="filter-btn" data-filter="silver">白银级</button>
+                    <button class="filter-btn" data-filter="bronze">青铜级</button>
+                    <button class="filter-btn" data-filter="supporter">支持者</button>
+                </div>
+                <div class="sort-group">
+                    <select id="sortSelect">
+                        <option value="date-desc">最新捐款</option>
+                        <option value="date-asc">最早捐款</option>
+                        <option value="amount-desc">捐款金额（高到低）</option>
+                        <option value="amount-asc">捐款金额（低到高）</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 捐款者荣誉墙 -->
+            <div class="donors-wall" id="donorsWall">
+                <!-- 钻石级捐款者 -->
+                <div class="donor-card diamond" data-tier="diamond" data-date="2026-03-20" data-amount="150000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">张</div>
+                        <div class="tier-badge">💎</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">张**</h3>
+                        <div class="donor-amount">¥150,000</div>
+                        <div class="donor-date">2026年3月20日</div>
+                        <div class="donor-message">支持科研创新，推动科技进步！</div>
+                    </div>
+                </div>
+
+                <div class="donor-card diamond" data-tier="diamond" data-date="2026-03-18" data-amount="120000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">李</div>
+                        <div class="tier-badge">💎</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">李**</h3>
+                        <div class="donor-amount">¥120,000</div>
+                        <div class="donor-date">2026年3月18日</div>
+                        <div class="donor-message">为量子计算研究贡献力量</div>
+                    </div>
+                </div>
+
+                <!-- 白金级捐款者 -->
+                <div class="donor-card platinum" data-tier="platinum" data-date="2026-03-22" data-amount="80000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">王</div>
+                        <div class="tier-badge">👑</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">王**</h3>
+                        <div class="donor-amount">¥80,000</div>
+                        <div class="donor-date">2026年3月22日</div>
+                        <div class="donor-message">希望AI技术能早日应用于医疗</div>
+                    </div>
+                </div>
+
+                <div class="donor-card platinum" data-tier="platinum" data-date="2026-03-19" data-amount="75000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">陈</div>
+                        <div class="tier-badge">👑</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">陈**</h3>
+                        <div class="donor-amount">¥75,000</div>
+                        <div class="donor-date">2026年3月19日</div>
+                        <div class="donor-message">匿名捐助</div>
+                    </div>
+                </div>
+
+                <!-- 黄金级捐款者 -->
+                <div class="donor-card gold" data-tier="gold" data-date="2026-03-21" data-amount="35000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">刘</div>
+                        <div class="tier-badge">🥇</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">刘**</h3>
+                        <div class="donor-amount">¥35,000</div>
+                        <div class="donor-date">2026年3月21日</div>
+                        <div class="donor-message">支持新能源技术发展</div>
+                    </div>
+                </div>
+
+                <div class="donor-card gold" data-tier="gold" data-date="2026-03-17" data-amount="28000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">赵</div>
+                        <div class="tier-badge">🥇</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">赵**</h3>
+                        <div class="donor-amount">¥28,000</div>
+                        <div class="donor-date">2026年3月17日</div>
+                        <div class="donor-message">为科技创新尽一份力</div>
+                    </div>
+                </div>
+
+                <!-- 白银级捐款者 -->
+                <div class="donor-card silver" data-tier="silver" data-date="2026-03-20" data-amount="15000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">孙</div>
+                        <div class="tier-badge">🥈</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">孙**</h3>
+                        <div class="donor-amount">¥15,000</div>
+                        <div class="donor-date">2026年3月20日</div>
+                        <div class="donor-message">希望科技改变生活</div>
+                    </div>
+                </div>
+
+                <div class="donor-card silver" data-tier="silver" data-date="2026-03-16" data-amount="12000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">周</div>
+                        <div class="tier-badge">🥈</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">周**</h3>
+                        <div class="donor-amount">¥12,000</div>
+                        <div class="donor-date">2026年3月16日</div>
+                        <div class="donor-message">科研需要大家的支持</div>
+                    </div>
+                </div>
+
+                <!-- 青铜级捐款者 -->
+                <div class="donor-card bronze" data-tier="bronze" data-date="2026-03-22" data-amount="5000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">吴</div>
+                        <div class="tier-badge">🥉</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">吴**</h3>
+                        <div class="donor-amount">¥5,000</div>
+                        <div class="donor-date">2026年3月22日</div>
+                        <div class="donor-message">尽绵薄之力</div>
+                    </div>
+                </div>
+
+                <div class="donor-card bronze" data-tier="bronze" data-date="2026-03-21" data-amount="3000">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">郑</div>
+                        <div class="tier-badge">🥉</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">郑**</h3>
+                        <div class="donor-amount">¥3,000</div>
+                        <div class="donor-date">2026年3月21日</div>
+                        <div class="donor-message">支持科技创新</div>
+                    </div>
+                </div>
+
+                <!-- 支持者 -->
+                <div class="donor-card supporter" data-tier="supporter" data-date="2026-03-22" data-amount="500">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">冯</div>
+                        <div class="tier-badge">❤️</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">冯**</h3>
+                        <div class="donor-amount">¥500</div>
+                        <div class="donor-date">2026年3月22日</div>
+                        <div class="donor-message">小小支持，大大梦想</div>
+                    </div>
+                </div>
+
+                <div class="donor-card supporter" data-tier="supporter" data-date="2026-03-21" data-amount="200">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">朱</div>
+                        <div class="tier-badge">❤️</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">朱**</h3>
+                        <div class="donor-amount">¥200</div>
+                        <div class="donor-date">2026年3月21日</div>
+                        <div class="donor-message">为学生尽一份力</div>
+                    </div>
+                </div>
+
+                <div class="donor-card supporter" data-tier="supporter" data-date="2026-03-20" data-amount="100">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">许</div>
+                        <div class="tier-badge">❤️</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">许**</h3>
+                        <div class="donor-amount">¥100</div>
+                        <div class="donor-date">2026年3月20日</div>
+                        <div class="donor-message">支持科研</div>
+                    </div>
+                </div>
+
+                <div class="donor-card supporter" data-tier="supporter" data-date="2026-03-19" data-amount="50">
+                    <div class="donor-avatar">
+                        <div class="avatar-placeholder">何</div>
+                        <div class="tier-badge">❤️</div>
+                    </div>
+                    <div class="donor-info">
+                        <h3 class="donor-name">何**</h3>
+                        <div class="donor-amount">¥50</div>
+                        <div class="donor-date">2026年3月19日</div>
+                        <div class="donor-message">爱心捐助</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="loadMoreBtn">加载更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA 区域 -->
+    <section class="donors-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>加入我们的支持者行列</h2>
+                <p>您的每一份支持，都将推动科研创新，改变未来世界</p>
+                <div class="cta-buttons">
+                    <a href="donation.html" class="btn btn-primary btn-large">立即捐助</a>
+                    <a href="index.html#projects" class="btn btn-secondary btn-large">查看项目</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">SciBoost</h4>
+                    <p class="footer-description">
+                        加速科研创新，连接科技与资本，推动人类进步。
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#projects">科研项目</a></li>
+                        <li><a href="donors.html" style="color: var(--primary-blue)">捐款者名录</a></li>
+                        <li><a href="index.html#how-to-participate">参与方式</a></li>
+                        <li><a href="index.html#about">关于我们</a></li>
+                        <li><a href="index.html#contact">联系我们</a></li>
+                        <li><a href="donation.html">捐助支持</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">投资者指南</a></li>
+                        <li><a href="#">科研团队指南</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">法律</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">风险提示</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SciBoost. All rights reserved. | 京ICP备2026888888号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 捐款者数据管理
+        document.addEventListener('DOMContentLoaded', function() {
+            initDonorsPage();
+        });
+
+        function initDonorsPage() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const sortSelect = document.getElementById('sortSelect');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const donorCards = document.querySelectorAll('.donor-card');
+
+            let currentFilter = 'all';
+            let currentSort = 'date-desc';
+            let visibleCount = 12; // 初始显示数量
+
+            // 筛选功能
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    filterAndSortDonors();
+                });
+            });
+
+            // 排序功能
+            sortSelect.addEventListener('change', function() {
+                currentSort = this.value;
+                filterAndSortDonors();
+            });
+
+            // 加载更多
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    visibleCount += 12;
+                    filterAndSortDonors();
+                });
+            }
+
+            function filterAndSortDonors() {
+                let visibleCards = [];
+                
+                // 筛选
+                donorCards.forEach(card => {
+                    if (currentFilter === 'all' || card.dataset.tier === currentFilter) {
+                        visibleCards.push(card);
+                    }
+                });
+
+                // 排序
+                visibleCards.sort((a, b) => {
+                    switch (currentSort) {
+                        case 'date-desc':
+                            return new Date(b.dataset.date) - new Date(a.dataset.date);
+                        case 'date-asc':
+                            return new Date(a.dataset.date) - new Date(b.dataset.date);
+                        case 'amount-desc':
+                            return parseInt(b.dataset.amount) - parseInt(a.dataset.amount);
+                        case 'amount-asc':
+                            return parseInt(a.dataset.amount) - parseInt(b.dataset.amount);
+                        default:
+                            return 0;
+                    }
+                });
+
+                // 显示/隐藏卡片
+                donorCards.forEach(card => {
+                    card.style.display = 'none';
+                });
+
+                visibleCards.slice(0, visibleCount).forEach((card, index) => {
+                    card.style.display = 'block';
+                    card.style.animationDelay = (index * 0.05) + 's';
+                });
+
+                // 显示/隐藏加载更多按钮
+                if (loadMoreBtn) {
+                    if (visibleCards.length <= visibleCount) {
+                        loadMoreBtn.style.display = 'none';
+                    } else {
+                        loadMoreBtn.style.display = 'block';
+                    }
+                }
+            }
+
+            // 初始加载
+            filterAndSortDonors();
+
+            // 添加滚动动画
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            donorCards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+    </script>
+</body>
+</html>
