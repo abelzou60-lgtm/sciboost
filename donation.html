@@ -190,6 +190,14 @@
                             </div>
                             <div class="flag-name">Stripe支付</div>
                         </a>
+
+                        <!-- USDT支付 -->
+                        <div class="country-flag" data-country="usdt">
+                            <div class="flag-icon">
+                                <img src="https://cf.aibomart.com/%E6%89%98%E7%AE%A1%E7%AB%99%E7%82%B9/sciboost/usd-logo.png" alt="USDT" style="width: 48px; height: 32px; object-fit: contain; border-radius: 2px;">
+                            </div>
+                            <div class="flag-name">USDT (BEP20)</div>
+                        </div>
                     </div>
 
                     <div class="donation-note">
@@ -380,6 +388,15 @@
                     { label: '汇款路径代码', value: '101019628', note: '供电汇和ACH使用' },
                     { label: 'Swift/BIC', value: 'TRWIUS35XXX', note: '从美国境外汇款时使用' },
                     { label: '银行名称和地址', value: 'Wise US Inc, 108 W 13th St, Wilmington, DE, 19801, United States' }
+                ]
+            },
+            usdt: {
+                country: 'USDT (BEP20)',
+                accounts: [
+                    { label: '币种', value: 'USDT' },
+                    { label: '网络', value: 'BSC (BEP20)' },
+                    { label: '钱包地址', value: '0xA31049F281DeFcA28B5bF4559a48D76B9f95b6dB' },
+                    { label: '重要提示', value: '请务必核对币种、网络和地址信息', note: '转账时请确保使用正确的网络，否则资金可能无法找回' }
                 ]
             }
         };
