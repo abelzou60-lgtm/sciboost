@@ -843,7 +843,7 @@ body {
 
 .footer-social {
     display: flex;
-    gap: 2.5rem;
+    gap: 4rem;
     flex-wrap: wrap;
 }
 
